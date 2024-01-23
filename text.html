@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border:1px solid #333;
+            width:200px;
+            height:40px;
+            text-align:center;
+            line-height:40px;
+            border-radius:8px;
+            position:relative;
+            overflow: hidden;
+            margin:auto;
+        }
+        .box:hover::after{
+            left:-20px;
+        }
+        .box2{
+            content:"";
+            width:300px;
+            height:40px;
+            background:#0650f1;
+            position:absolute;
+            transform: skew(-45deg);
+            z-index:-1;
+            top:0;
+            left:-320px;
+            transition:all 300ms;
+        }
+        .box2.box-after{
+            left:-20px;
+            transition:all 300ms;
+        }
+    </style>
+    <script src="js/ex.js"></script>
+    <script>
+        $(function(){
+            $('.box').mouseenter(function(){
+               ('.box2').addClass('.box-after');
+                // $('.box2')
+                // .animate({
+                //     'left': '-20px'
+                // } ,300, function(){
+                //     $('.box').css('color', '#fff');
+                // });
+                $
+                $('.box2').removeClass
+            });
+        }); //jquery
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div class="box2"></div>
+        test form
+    </div>
+    
+</body>
+</html>
